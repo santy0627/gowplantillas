@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+section[id]{
+  scroll-margin-top: calc(10vh - 1px);
+}
+
+.cabecera{
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to right, #36d1dc, #9b5dec);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 100px;
+  color: white;
+  position: fixed;
+  z-index: 3;
+}
+
+.navegacion__list{
+  display: flex;
+  gap: 25px;
+}
+
+.list__element{
+  list-style: none;
+  cursor: pointer;
+}
+
+.list__link{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.list__link::after{
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: white;
+  display: block;
+  transition: all 350ms;
+}
+
+.list__link:hover::after{
+  width: 100%;
+}
+
+.nombre{
+    color:red;
+}
+
+.main-inicio{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: auto;
+}
+
+.landing{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img{
+  width: 600px;
+  height: 600px;
+  background-image: url(./img/cat-removebg-preview.png);
+  background-size: cover;
+}
+
+.texts{
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  font-size: 25px
+  
+}
+
+.catalogo{
+  background: linear-gradient(to right, #36d1dc, #9b5dec);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.catalogo__titulo{
+  font-size: 60px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.plantillas{
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2, 700px);
+  gap: 30px;
+  justify-content: center;
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.product{
+  width: 700px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  gap: 30px;
+  padding: 20px 40px;
+  align-items: center;
+  background-color: whitesmoke;
+  transition: all 150ms ease;
+  box-shadow: 0px 0px 20px -7px rgba(0,0,0,0.55);
+}
+
+.txt{
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.text::-webkit-scrollbar-track{
+  background: red;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.product__name{
+  font-size: 30px;
+}
+
+img{
+  border-radius: 20px;
+}
+
+.btn{
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  width: 12rem;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-size: 15px;
+  background-color: #9b5dec;
+  color: white;
+  box-shadow: 0px 5px 2px 0px rgba(107, 64, 163, 1);
+}
+
+.btn:hover{ 
+  transform: scale(1.1);
+  background-color: #FED766;
+  box-shadow: 0px 5px 2px 0px #c2a54e;
+}
+
+.main-login{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+form{
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: whitesmoke;
+  padding: 50px 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px -7px rgba(0,0,0,0.55);
+}
+
+.form__title{
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  padding: 8px 16px;
+  width: 30rem;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  transition: all 150ms ease;
+}
+
+input:focus{
+  transform: scale(1.1);
+  outline: none;
+}
+
+@media (max-width:1560px) {
+  .plantillas{
+    grid-template-columns: repeat(1, 700px);
+  }
+
+}
+
+@media (max-width:1530px) {
+
+  .texts{
+    width: 400px;
+    font-size: 20px;
+    height: max-content;
+  }
+
+  .img{
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width:800px) {
+  .catalogo{
+    padding: 10px;
+  }
+}
